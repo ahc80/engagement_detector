@@ -1,22 +1,29 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>engagement_detector</name>
   <version>1.0.0</version>
   <description>The engagement_detector package</description>
 
   <maintainer email="fdelduchetto@lincoln.ac.uk">Francesco Del Duchetto</maintainer>
-
-  <license>TODO</license>
+  <license>MIT</license>
 
   <author email="fdelduchetto@lincoln.ac.uk">Francesco Del Duchetto</author> 
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>python-numpy</run_depend>
-  <run_depend>python-imaging</run_depend>
-  <run_depend>python-tensorflow-gpu-pip</run_depend>
-  <run_depend>python-keras-pip</run_depend>
-  <run_depend>python-opencv</run_depend>
+  <!-- Python 3 and ML runtime dependencies -->
+  <exec_depend>python3</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-pillow</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+
+  <!-- use rosdep keys like these -->
+  <exec_depend>python3-tensorflow</exec_depend>
+  <exec_depend>python3-keras</exec_depend>
+  <exec_depend>python3-keras-applications</exec_depend>
+
+  <!-- if using cv_bridge -->
+  <exec_depend>cv-bridge</exec_depend>
 
   <export/>
 </package>
